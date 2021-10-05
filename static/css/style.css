@@ -1,0 +1,159 @@
+h1	{
+	padding-top: 25px;
+}
+
+h2 {
+	margin-top: 40px;
+}
+
+body {
+	margin: auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
+/* 	background-image: url('../images/polka-dots.png'); */
+	background-color: #00334E;
+	color: #00334E;
+	font-family: 'Montserrat', sans-serif;
+}
+
+i {
+	color: #00334E;
+	padding: 5px;
+}
+
+i:hover {
+    opacity: 0.7;
+}
+
+p {
+	margin: 0;
+}
+
+em {
+	text-decoration: underline;
+	padding-right: 5px;
+}
+
+.about {
+	/* background-image: url('../images/dust_scratches.png'); */
+	background-color: #E8E8E8;
+	outline: 1px solid black;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.copyright {
+	color: #E8E8E8;
+	margin: 10px 0 0 0;
+}
+
+.education {
+	margin-top: 20px;
+}
+
+.portfolio {
+	/* background-image: url('../images/school.png'); */
+	background-color: #5588A3;
+	outline: 1px solid black;
+	padding: 10px 10px 0 10px;
+	margin-top: 15px;
+}
+
+.portfolio h4 {
+	color: #E8E8E8;
+}
+
+.portfolio h6 {
+	color: #E8E8E8;
+	font-family: 'Roboto Slab', serif;
+}
+
+.contact {
+	background-image: url('../images/squared_metal.png');
+	outline: 1px solid black;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+h3 {
+	font-size: 1.4em;
+}
+
+.right {
+    padding: 15px;
+		width: 300px;
+    border-radius: 50%;
+		margin: auto;
+		display: block;
+}
+
+hr {
+	background-color: #E8E8E8;
+	width: 40%;
+	margin-left: 0;
+}
+
+.title {
+	padding: 50px;
+	text-align: left;
+}
+
+@media (max-width: 767px) {
+	.title {
+		text-align: center;
+	}
+}
+
+@media (min-width: 768px) {
+	.pop-out
+	{
+			transition: transform .5s;
+	}
+
+	.pop-out:hover
+	{
+			-ms-transform: scale(1.5, 1.5);
+			-webkit-transform: scale(1.5, 1.5);
+			transform: scale(1.5, 1.5);
+			z-index: 1;
+	}
+}
+
+.history {
+	text-align: left;
+	padding: 20px 0;
+}
+
+.techs {
+	margin: 20px 0;
+}
+
+.right-button {
+	margin-right: auto;
+}
+
+.project {
+	color: white;
+}
+
+.card {
+	background-color: #E8E8E8;
+	padding: 2px;
+}
+
+.project-btn {
+	background-color: #145374;
+}
+
+.project-btn:hover {
+	background-color: #00334E;
+}
+
+.portfolio i {
+	color: white;
+}
+
+.project i {
+	color: white;
+}

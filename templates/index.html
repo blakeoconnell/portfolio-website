@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Blake O'Connell - Software Engineer</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+	<div class="container">
+	<div class="about">
+		<div class="row">
+			<div class="col-xl-4 col-md-5">
+				<img class="right" src="{{ url_for('static', filename= 'assets/blake.png') }}" />
+			</div>
+			<div class="col-md-5 title">
+				<h1>Blake O'Connell</h1>
+				<h4>Software Engineer</h4>
+				<a title="Blake O'Connell on GitHub" href="https://github.com/blakeoconnell"><i class="fab fa-github fa-2x"></i></a>
+				<a title="Blake O'Connell on LinkedIn" href="https://www.linkedin.com/in/blakeoconnell/"><i class="fab fa-linkedin fa-2x"></i></a>
+				<a title="Send email to Blake O'Connell" href="mailto:blake.mw.oconnell@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+				<a title="Download Blake O'Connell's Resume" href="{{ url_for('download_resume') }}"><i class="fas fa-file fa-2x"></i></a>
+			</div>
+		</div>
+		<hr>
+			<div class="history">
+				<h4>About Me</h4>
+				<div class="techs">
+					<p><strong>Languages:</strong> Python, JavaScript, Java, SQL, Swift, HTML, CSS, PHP.</p>
+					<p><strong>Frameworks:</strong> Bootstrap, Flask, Node.js.</p>
+					<p><strong>IDEs/Editors:</strong> PyCharm, Visual Studio, VSCode, NetBeans, Eclipse, Android Studio, XCode.</p>
+				</div>
+				<h5>Work Experience</h5>
+				<table>
+					<tr>
+						<td><em>Dec 2019 - Sept 2021</em></td>
+						<td>Senior Software Engineer at Bank of the West</td>
+					</tr>
+					<tr>
+						<td><em>Aug 2018 - Dec 2019</em></td>
+						<td>Junior RPA Developer at Bank of the West</td>
+					</tr>
+				</table>
+				<h5 class="education">Education</h5>
+				<table>
+					<tr>
+						<td><em>Aug 2013 - May 2018</em></td>
+						<td>BS in Computer Science at Arizona State University</td>
+					</tr>
+				</table>
+			</div>
+
+	</div>
+	<div class="portfolio">
+		<h4>Portfolio</h4>
+		<h6>A showcase of projects I've done.</h6>
+		<div class="row">
+			{% for project in projects %}
+			<div class="col col-lg-4 col-md-6 col-12 mb-4">
+		    <div class="card h-100">
+		      <img src="{{ url_for('static', filename=project.imgURL) }}" class="card-img-top pop-out" alt="...">
+		      <div class="card-body">
+		        <h5 class="card-title">{{ project.title }}</h5>
+		        <p class="card-text">{{ project.short_desc }}</p>
+		      </div>
+					<div class="card-footer">
+						<a href="{{ url_for('get_project', id=project.id) }}" class="btn btn-primary project-btn">More Info</a>
+						<a href="{{ project.githubURL }}" class="btn btn-dark float-right">Source <i class="fab fa-github"></i></a>
+					</div>
+		    </div>
+		  </div>
+			{% endfor %}
+		</div>
+		<!-- <div class="row" style="display:flex; flex-wrap: wrap;">
+			<div id="box1" class="col-md-4 col-sm-6">
+				<div class="thumbnail">
+					<a href="https://github.com/blakeoconnell/DoYourChores"><img class="img-thumbnail rounded img-fluid" src="images/doyourchores.png"></a>
+					<div class="caption">
+						<h4 class="text1 text-center">Do Your Chores (iOS Application)</h4>
+						<p>A mobile application designed to randomly designate chore assignments. A user must input the names of each person they wish to have chores assigned to, as well as each chore to be completed. The app will then assign an even amount of
+							unique chores randomly to each person on the user's list. If the user is satisfied, the session can be saved and referenced at their convenience.</p>
+						<p><strong>Languages/Skills/etc:</strong> Swift 4, CoreData, Web APIs</p>
+					</div>
+				</div>
+			</div>
+			<div id="box1" class="col-md-4 col-sm-6">
+				<div class="thumbnail">
+					<a href="https://apps.facebook.com/1827069484239324"><img class="img-thumbnail rounded img-fluid" src="images/goz.png"></a>
+					<div class="caption">
+						<h4 class="text1 text-center">Game of Zones (Web Application)</h4>
+						<p>Game of Zones is a web application where teams of players compete against each other to eliminate excess energy usage. Teams earn more points for using less energy. Currently, three energy types are tracked: In-home Gas, Electricity,
+							and MPG. The app is embedded in Facebook, allowing us to utilize their PHP Graph SDK to retrieve user data to structure our database.</p>
+						<p><strong>Languages/Skills/etc:</strong> HTML, CSS, JS, PHP, MySQL</p>
+					</div>
+				</div>
+			</div>
+			<div id="box1" class="col-md-4 col-sm-6">
+			<div class="thumbnail">
+				<a href="https://github.com/blakeoconnell/Todoey"><img class="img-thumbnail rounded img-fluid" src="https://fthmb.tqn.com/EbpmlVgW_OdVzRPcgX82Fwy9BUE=/768x0/filters:no_upscale()/square-589630495f9b5874ee38b464.jpg"></a>
+				<div class="caption">
+					<h4 class="text1 text-center">Todoey (iOS Application)</h4>
+				</div>
+			</div>
+		</div>
+		</div> -->
+	</div>
+	<div class="copyright">
+		<p>Copyright © 2021 Blake O'Connell</p>
+	</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
