@@ -42,9 +42,20 @@ em {
 	margin-bottom: 10px;
 }
 
+.big-img {
+    padding-top: 20px;
+    max-width: 80%;
+}
+
 .copyright {
 	color: #E8E8E8;
+	padding-top: 10px;
 	margin: 10px 0 0 0;
+}
+
+.carousel {
+    padding-top: 20px;
+    max-width: 80%;
 }
 
 .education {
@@ -95,13 +106,18 @@ hr {
 }
 
 .title {
-	padding: 50px;
+	padding: 50px 10px 50px 50px;
 	text-align: left;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	.title {
+	    padding: 0 50px 10px 50px;
 		text-align: center;
+	}
+	hr {
+	    margin: auto;
+	    width: 80%;
 	}
 }
 

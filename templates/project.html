@@ -25,7 +25,22 @@
     <div class="showcase">
       <h1>{{ project.title }}</h1>
       <h6>{{ project.short_desc }}</h6>
-      <img src="{{ url_for('static', filename=project.imgURL) }}" alt="{{ project.title }} in action.">
+      {% if project.carouselImages|length < 2 %}
+      <img class="big-img" src="{{ url_for('static', filename=project.carouselImages[0]) }}" alt="{{ project.title }} in action.">
+      {% else %}
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src=" {{ url_for('static', filename=project.carouselImages[0]) }} " class="d-block w-100" alt="{{ project.title }} in action.">
+          </div>
+          {% for i in range(1, project.carouselImages|length) %}
+          <div class="carousel-item">
+            <img src="{{ url_for('static', filename=project.carouselImages[i]) }}" class="d-block w-100" alt="{{ project.title }} in action.">
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+      {% endif %}
     </div>
     <div class="description">
       <h2>
@@ -44,7 +59,9 @@
       <hr>
       <p>{{ project.learnings }}</p>
     </div>
-
+	<div class="copyright">
+		<p>Copyright © 2021 Blake O'Connell</p>
+	</div>
   </div>
 
 </div>

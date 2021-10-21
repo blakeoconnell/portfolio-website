@@ -13,6 +13,7 @@ for item in data.project_data:
         item["short_desc"],
         item["long_desc"],
         item["imgURL"],
+        item["carouselImages"],
         item["githubURL"],
         item["technologies"],
         item["learnings"]
@@ -29,7 +30,6 @@ def home():
 def get_project(id):
     for project in projects:
         if project.id == id:
-            print(project.technologies)
             return render_template('project.html', project=project)
     return render_template('project.html', project=None)
 

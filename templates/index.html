@@ -15,10 +15,10 @@
 	<div class="container">
 	<div class="about">
 		<div class="row">
-			<div class="col-xl-4 col-md-5">
+			<div class="col-xl-4 col-lg-5">
 				<img class="right" src="{{ url_for('static', filename= 'assets/blake.png') }}" />
 			</div>
-			<div class="col-md-5 title">
+			<div class="col-lg-7 title">
 				<h1>Blake O'Connell</h1>
 				<h4>Software Engineer</h4>
 				<a title="Blake O'Connell on GitHub" href="https://github.com/blakeoconnell"><i class="fab fa-github fa-2x"></i></a>
@@ -61,9 +61,9 @@
 		<h6>A showcase of projects I've done.</h6>
 		<div class="row">
 			{% for project in projects %}
-			<div class="col col-lg-4 col-md-6 col-12 mb-4">
+			<div class="col col-xl-4 col-lg-6 col-12 mb-4">
 		    <div class="card h-100">
-		      <img src="{{ url_for('static', filename=project.imgURL) }}" class="card-img-top pop-out" alt="...">
+		      <img src="{{ url_for('static', filename=project.imgURL) }}" class="card-img-top" alt="...">
 		      <div class="card-body">
 		        <h5 class="card-title">{{ project.title }}</h5>
 		        <p class="card-text">{{ project.short_desc }}</p>
