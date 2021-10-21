@@ -63,7 +63,7 @@ project_data = [
         "long_desc": "This project gives users an option to select 30, 50 or 100 randomly generated words to test "
                      "themselves on. The words are displayed in the top portion of the GUI and the user is prompted "
                      "to type in the bottom portion, copying the words they see above. As words are typed, the program "
-                     "calculates how many words per minute the user has <strong>accurately</strong> typed.",
+                     "calculates how many words per minute the user has accurately typed.",
         "imgURL": "assets/type-test-square.png",
         "carouselImages": ["assets/typing-test-begin.png", "assets/typing-test-end.png"],
         "githubURL": "https://github.com/blakeoconnell/typing-test",
