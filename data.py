@@ -38,7 +38,7 @@ project_data = [
     {
         "id": 1,
         "title": "Breakout Game",
-        "short_desc": "A recreation of the classic arcade game Breakout using Python and the Turtle Module. ",
+        "short_desc": "A recreation of the classic arcade game Breakout using Python and the Turtle Module.",
         "long_desc": "Breakout is an arcade game developed and published by Atari in 1976. The goal of the game "
                      "is to break all the blocks by repeatedly bouncing a ball off a paddle into them. "
                      "What you see here is my recreation of the game using Python and the built-in Turtle Module. ",
@@ -80,6 +80,36 @@ project_data = [
     },
     {
         "id": 3,
+        "title": "Space Invaders",
+        "short_desc": "A clone of the classic arcade game, Space Invaders. Developed in Python using the Turtle Module.",
+        "long_desc": "Space Invaders is an arcade game first released in 1978. Space Invaders was the first "
+                     "'fixed shooter' and inspired many popular games thereafter. The goal is to defeat waves of enemy "
+                     "aliens to earn as many points as possible. "
+                     "What you see here is my recreation of the game using Python and the built-in Turtle Module. ",
+        "imgURL": "assets/space-invaders-square.png",
+        "carouselImages": ["assets/space-invaders-lg.png"],
+        "githubURL": "https://github.com/blakeoconnell/SpaceInvadersClone",
+        "technologies": ["Python", "turtle.py", "Object-Oriented Programming", "Sounds", "Multithreading"],
+        "learnings": "I spent more time on this project than others up to this point. The biggest thing I learned from "
+                     "this project was how important planning and design is. I spent a good amount of time drawing up "
+                     "a UML diagram beforehand, planning out all the classes, functions, features, etc. I wanted to "
+                     "include in the game. The performance of the turtle module was a challenge I had to tackle. "
+                     "Having each enemy ship, the player ship, each missile, the bonus ship, and all of the defenses "
+                     "as their own objects seemed to hinder the performance of the game a great deal that I did not "
+                     "anticipate, and so I spent some time working out how best to optimize the game loop so it could "
+                     "run as efficiently as possible. I also worked with sounds for the first time while creating this "
+                     "game. I noticed that playing a sound on the same thread as the main game would halt everything "
+                     "until the sound effect finished, and that was obviously a huge problem. With that, I had to "
+                     "implement multithreading so the sound effects could play on a separate thread and the game could "
+                     "continue to run without delay. Finally. the limitation of the turtle module prevented me from "
+                     "implementing one feature I wanted to recreate from the original game: visual effects. This "
+                     "would have included both the enemy ship animations and all explosion animations. I learned that "
+                     "turtle can not play animations, so I had to scrap this feature entirely. Overall, despite the "
+                     "limitations of the module, I'm pleased with the results!"
+
+    },
+    {
+        "id": 4,
         "title": "WoW Class Picker",
         "short_desc": "A simple front-end web app to randomly select a playable class for the video game World of Warcraft.",
         "long_desc": "This project was built using entirely front-end technologies to practice adding logic to webpages. "
@@ -94,7 +124,7 @@ project_data = [
                      "make sure the design was responsive so mobile users could also use this without difficulty clicking the buttons."
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Do Your Chores",
         "short_desc": "A mobile application designed to randomly designate chore assignments.",
         "long_desc": "This is an iOS app I developed in college as a capstone project. A user must input the names of each person they wish to have chores assigned to, as well as each chore to be completed. The app will then assign an even amount of "
