@@ -3,6 +3,13 @@
 
 <head>
 	<title>{{ project.title }} | Blake O'Connell</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url_for('get_project', id=project.id) }}">
+    <meta property="og:title" content="{{ project.title }} | Blake O'Connell">
+    <meta property="og:description" content="{{ project.short_desc }}">
+    <meta property="og:image" content="{{ project.imgURL }}">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
