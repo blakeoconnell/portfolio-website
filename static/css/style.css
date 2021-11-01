@@ -115,7 +115,7 @@ hr {
 	    padding: 0 50px 10px 50px;
 		text-align: center;
 	}
-	hr {
+	.about hr {
 	    margin: auto;
 	    width: 80%;
 	}
