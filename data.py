@@ -114,12 +114,12 @@ project_data = [
         "short_desc": "A simple front-end web app to randomly select a playable class for the video game World of Warcraft.",
         "long_desc": "This project was built using entirely front-end technologies to practice adding logic to webpages. "
                      "The picker has filtering options a user can apply prior to the randomizer selecting a class for them.",
-        "imgURL": "assets/444x444wowpicker.png",
-        "carouselImages": ["assets/444x444wowpicker.png"],
+        "imgURL": "assets/wowpicker.png",
+        "carouselImages": ["assets/wowpicker.png", "assets/wowpicker-2.png"],
         "githubURL": "https://github.com/blakeoconnell/wow-class-picker",
         "technologies": ["Responsive Web Design", "HTML", "CSS", "JavaScript", "jQuery"],
         "learnings": "This was a fun little challenge early on in my web development learning. I gained an understanding of "
-                     "the importance of cleaning storing data so I could use it without a ton of difficulty. "
+                     "interacting with the DOM utilizing jQuery and working with data stored in arrays. "
                      "All in all, the most difficult part of this challenge was actually the HTML/CSS portion. I wanted to "
                      "make sure the design was responsive so mobile users could also use this without difficulty clicking the buttons."
     },
