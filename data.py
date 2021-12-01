@@ -58,6 +58,30 @@ project_data = [
     },
     {
         "id": 2,
+        "title": "Dummy Blog",
+        "short_desc": "A dummy blog built with Flask utilizing a relational database to hold users, blog posts and comments.",
+        "long_desc": "This project is a blog which allows the admin user to create/delete posts, as well as any non-admin "
+                     "user to comment on posts. The frontend was created using an HTML template as a starting point. "
+                     "The backend is built with Flask. Sqlite3 was used during development for the database, and Postgres "
+                     "was used once I moved to 'prod' to bring it online. This blog also features a contact page, which "
+                     "when filled out will generate and send an email to me with their contact information and message.",
+        "imgURL": "assets/dummy-blog.png",
+        "carouselImages": ["assets/dummy-blog.png"],
+        "githubURL": "https://github.com/blakeoconnell/dummy-blog",
+        "technologies": ["Python", "Flask", "Relational Database", "Jinja Templates", "Login Manager", "WTForms"],
+        "learnings": "I learned a great deal from this project in regards to databases and how websites manage logins. "
+                     "Before this, 'Relational Database' to me was just a keyword I didn't fully understand. But, "
+                     "having connected blog posts to comments, users to comments it really started to click for me. "
+                     "Using the flask_login module it was deceptively easy to manage both logins and determining if "
+                     "the logged in user was an admin. The other feature of this blog is a contact form. Not the most "
+                     "impressive thing in the world, but I learned how to incorporate WTForms with Flask to create a "
+                     "form that allows users to fill out a contact form that sends me an email with their message. "
+                     "Overall, I had a ton of fun with this project and it opened up a lot of ideas "
+                     "in my mind on future projects I would like to implement using a database and managing users. "
+
+    },
+    {
+        "id": 3,
         "title": "Typing Test",
         "short_desc": "A simple typing test to measure words per minute when typing a list of random words.",
         "long_desc": "This project gives users an option to select 30, 50 or 100 randomly generated words to test "
@@ -79,7 +103,7 @@ project_data = [
 
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "Space Invaders",
         "short_desc": "A clone of the classic arcade game, Space Invaders. Developed in Python using the Turtle Module.",
         "long_desc": "Space Invaders is an arcade game first released in 1978. Space Invaders was the first "
@@ -109,7 +133,52 @@ project_data = [
 
     },
     {
-        "id": 4,
+        "id": 5,
+        "title": "Spotify Wayback Machine",
+        "short_desc": "An application that will generate a playlist of the top 100 songs from any given day by the user.",
+        "long_desc": "This application utilizes web scraping the Billboard Top 100 list to get a list of the top 100 songs "
+                     "from a date provided by the user. It will then take the list of songs and create a new Spotify "
+                     "playlist using the Spotify API. Python's Beautiful Soup is used for the web scraping portion.",
+        "imgURL": "assets/spotify.jpg",
+        "carouselImages": ["assets/spotify.jpg"],
+        "githubURL": "https://github.com/blakeoconnell/spotify-wayback-machine",
+        "technologies": ["Python", "Web Scraping (Beautiful Soup)", "Web APIs"],
+        "learnings": "This project was really fun to develop. It was really cool to not only learn which songs were "
+                     "popular the day I was born, but also be able to instantly generate a Spotify playlist and start "
+                     "listening right away. Setting up Beautiful Soup to scrape the song titles was not too difficult, "
+                     "though I did run into an interesting issue when using some of the song titles to call the Spotify "
+                     "API. Not every song is available on Spotify, so in the case that a song title API call returned "
+                     "nothing, I had to implement some try/catch logic so the program would not crash. What resulted "
+                     "was some playlists not having a full 100 songs on them, but all in all I would call it a success. "
+                     "In the future I want to expand on this and maybe even make it into a mobile app that people can "
+                     "use to generate a playlist at any time!"
+    },
+    {
+        "id": 6,
+        "title": "Automated Cookie Clicker",
+        "short_desc": "An automation which plays the well-known web game Cookie Clicker with no human interaction.",
+        "long_desc": "This project was built using Selenium to interact with the elements on the webpage. "
+                     "The automation clicks cookies as fast as possible, whilst also checking the 'Store' to see if "
+                     "any upgrades are available to purchase every 10 seconds. The automation will buy the most "
+                     "expensive upgrade it can acquire so it can, of course, get even more cookies.",
+        "imgURL": "assets/cclicker-square.png",
+        "carouselImages": ["assets/cclicker.jpg"],
+        "githubURL": "https://github.com/blakeoconnell/cookie-clicker-automation",
+        "technologies": ["Python", "Selenium", "Gameplay Automation"],
+        "learnings": "Who doesn't love cookies? Learning about Selenium was kind of a Twilight Zone moment for me, "
+                     "becaause in my previous job I was an RPA developer, which involved pretty much doing exactly what "
+                     "Selenium does, just with a different (and more powerful) tool. It was really interesting to see "
+                     "how other tools are used to solve the same problems I dealt with in RPA. Developing this Cookie "
+                     "Clicker automation was fun, because I had to challenge myself to figure out what the optimal "
+                     "strategy would be in terms of when to check the store, and what to buy. I spent (probably too "
+                     "much) time messing around with different timings, different upgrades, before finally settling on "
+                     "'check every 10 seconds, buy most expensive upgrade' and that seemed to work the best. While this "
+                     "is just one example of automation with Selenium, I feel that with my background in RPA I could "
+                     "come up with a ton more things that would be really awesome to automate, and I'm excited to try "
+                     "it out some more in later projects."
+    },
+    {
+        "id": 7,
         "title": "WoW Class Picker",
         "short_desc": "A simple front-end web app to randomly select a playable class for the video game World of Warcraft.",
         "long_desc": "This project was built using entirely front-end technologies to practice adding logic to webpages. "
@@ -124,7 +193,7 @@ project_data = [
                      "make sure the design was responsive so mobile users could also use this without difficulty clicking the buttons."
     },
     {
-        "id": 5,
+        "id": 8,
         "title": "Do Your Chores",
         "short_desc": "A mobile application designed to randomly designate chore assignments.",
         "long_desc": "This is an iOS app I developed in college as a capstone project. A user must input the names of each person they wish to have chores assigned to, as well as each chore to be completed. The app will then assign an even amount of "

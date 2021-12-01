@@ -110,6 +110,21 @@ hr {
 	text-align: left;
 }
 
+
+
+@media (min-width: 1400px) {
+    .container-lg {
+        max-width: 1300px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .container-lg {
+        max-width: 1600px;
+    }
+}
+
+
 @media (max-width: 991px) {
 	.title {
 	    padding: 0 50px 10px 50px;
